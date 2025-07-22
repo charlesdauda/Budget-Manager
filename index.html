@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>Budget Manager</h1>
+    <p>Track your income, expenses, and visualize your budget</p>
+  </header>
+
+  <main>
+    <!-- Input Form -->
+    <section class="form-section">
+      <h2>Add Transaction</h2>
+      <form id="budget-form">
+        <input type="text" id="description" placeholder="Description" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <select id="category">
+          <option value="General">General</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Bills">Bills</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary-section">
+      <div class="card income-card">
+        <h3>Income</h3>
+        <p id="total-income">₵0</p>
+      </div>
+      <div class="card expense-card">
+        <h3>Expense</h3>
+        <p id="total-expense">₵0</p>
+      </div>
+      <div class="card balance-card">
+        <h3>Balance</h3>
+        <p id="balance">₵0</p>
+      </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="history-section">
+      <h2>Transaction History</h2>
+      <ul id="transaction-list"></ul>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="chart-section">
+      <h2>Budget Overview</h2>
+      <canvas id="budgetChart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Budget Manager. All rights reserved.</p>
+  </footer>
+  <!-- Your JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
