@@ -28,7 +28,6 @@ A simple and elegant budget tracker that helps you:
   ```bash
   git clone https://github.com/YOUR-USERNAME/budget-manager-app.git
   cd budget-manager-app
-  code .
  
 
 
